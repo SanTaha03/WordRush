@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPathFollow
   moveSpeed: 10
-  reachDistance: 0.1
+  reachDistance: 0.2
   waypoints: []
 --- !u!4 &7419567914838003011 stripped
 Transform:

@@ -7,11 +7,14 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI livesText;
+    
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject gameOverText;
     [SerializeField] private GameObject finalScoreTextObject;
     [SerializeField] private TextMeshProUGUI finalScoreText;
+
+    [Header("Hearts System")]
+    [SerializeField] private MonoBehaviour heartsController;
 
     [Header("Game Settings")]
     [SerializeField] private int startingLives = 3;
@@ -27,15 +30,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     private void Start()
@@ -44,7 +40,6 @@ public class GameManager : MonoBehaviour
         currentTime = gameDuration;
 
         UpdateScoreUI();
-        UpdateLivesUI();
         UpdateTimerUI();
 
         if (gameOverText != null)
@@ -89,30 +84,28 @@ public class GameManager : MonoBehaviour
 
         score += amount;
         UpdateScoreUI();
-        Debug.Log("Score actuel : " + score);
     }
 
     public void LoseLife(int amount = 1)
     {
-        if (isGameOver || isTimeOver)
-        {
-            return;
-        }
+        if (isGameOver || isTimeOver) return;
 
         currentLives -= amount;
+        if (currentLives < 0) currentLives = 0;
 
-        if (currentLives < 0)
-        {
-            currentLives = 0;
-        }
-
-        UpdateLivesUI();
-        Debug.Log("Vies restantes : " + currentLives);
+        UpdateHeartsUI();
 
         if (currentLives <= 0)
         {
             TriggerGameOver();
         }
+    }
+
+    private void UpdateHeartsUI()
+    {
+        if (heartsController == null) return;
+
+        heartsController.SendMessage("Hurt", 1f, SendMessageOptions.DontRequireReceiver);
     }
 
     private void TriggerGameOver()
@@ -176,20 +169,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void UpdateLivesUI()
-    {
-        if (livesText != null)
-        {
-            livesText.text = "VIES : " + currentLives;
-        }
-    }
-
     private void UpdateTimerUI()
     {
         if (timerText != null)
         {
-            int seconds = Mathf.CeilToInt(currentTime);
-            timerText.text = "TEMPS : " + seconds;
+            int totalSeconds = Mathf.CeilToInt(currentTime);
+            int minutes = totalSeconds / 60;
+            int seconds = totalSeconds % 60;
+
+            timerText.text = $"{minutes:00}:{seconds:00}";
         }
     }
 
