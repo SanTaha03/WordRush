@@ -116,16 +116,23 @@ public class WordInputManager : MonoBehaviour
             {
                 Debug.Log("Ennemi trouvé : " + enemy.enemyId + " | mot = " + enemy.GetWord());
 
+                bool shotStarted = false;
                 if (playerShooter != null)
                 {
-                    playerShooter.ShootAtEnemy(enemy);
+                    shotStarted = playerShooter.ShootAtEnemy(enemy);
                 }
                 else
                 {
                     Debug.LogWarning("WordInputManager : aucune référence vers PlayerShooter.");
                 }
 
-                ClearInput();
+                if (shotStarted)
+                {
+                    string newWord = spawnEnemy.GetRandomAvailableWord(enemy.GetWord());
+                    enemy.SetWord(newWord);
+                    ClearInput();
+                }
+
                 return;
             }
         }

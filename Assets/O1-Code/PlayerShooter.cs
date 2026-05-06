@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
@@ -6,40 +7,79 @@ public class PlayerShooter : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
 
-    private void Start()
-    {
-        Debug.Log($"PlayerShooter Start sur : {gameObject.name} | projectilePrefab = {(projectilePrefab != null ? projectilePrefab.name : "NULL")} | firePoint = {(firePoint != null ? firePoint.name : "NULL")}");
-    }
+    [Header("Animation")]
+    [SerializeField] private MageAttackAnimator mageAttackAnimator;
 
-    public void ShootAtEnemy(Enemy targetEnemy)
+    [Header("Rotation")]
+    [SerializeField] private MageAimController mageAimController;
+
+    [Header("Timing par défaut")]
+    [SerializeField] private float defaultProjectileDelay = 0.35f;
+
+    private bool isShooting = false;
+
+    public bool ShootAtEnemy(Enemy targetEnemy)
     {
-        Debug.Log($"ShootAtEnemy appelé sur {gameObject.name}");
+        if (isShooting)
+        {
+            return false;
+        }
 
         if (projectilePrefab == null)
         {
-            Debug.LogWarning($"PlayerShooter : aucun projectilePrefab assigné sur {gameObject.name}.");
-            return;
+            Debug.LogWarning("PlayerShooter : aucun projectilePrefab assigné.");
+            return false;
         }
 
         if (firePoint == null)
         {
-            Debug.LogWarning($"PlayerShooter : aucun firePoint assigné sur {gameObject.name}.");
-            return;
+            Debug.LogWarning("PlayerShooter : aucun firePoint assigné.");
+            return false;
         }
 
         if (targetEnemy == null)
         {
             Debug.LogWarning("PlayerShooter : targetEnemy est null.");
-            return;
+            return false;
         }
 
+        StartCoroutine(ShootWithAnimationDelay(targetEnemy));
+        return true;
+    }
+
+    private IEnumerator ShootWithAnimationDelay(Enemy targetEnemy)
+    {
+        isShooting = true;
+
+        if (mageAimController != null)
+        {
+            mageAimController.LookAtEnemy(targetEnemy);
+        }
+
+        float delay = defaultProjectileDelay;
+
+        if (mageAttackAnimator != null)
+        {
+            delay = mageAttackAnimator.PlayNextAttack();
+        }
+
+        yield return new WaitForSeconds(delay);
+
+        if (targetEnemy != null)
+        {
+            SpawnProjectile(targetEnemy);
+        }
+
+        isShooting = false;
+    }
+
+    private void SpawnProjectile(Enemy targetEnemy)
+    {
         GameObject projectileInstance = Instantiate(
             projectilePrefab,
             firePoint.position,
             Quaternion.identity
         );
-
-        Debug.Log("Projectile instancié : " + projectileInstance.name);
 
         Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
 

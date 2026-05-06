@@ -1247,6 +1247,108 @@ Transform:
   - {fileID: 1648213310}
   m_Father: {fileID: 1123809875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &355208136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_Name
+      value: magi_earthen_v1.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.025626313
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9996716
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+    - target: {fileID: 9500000, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6ddf9c32c99d3ec458960bdd7a480674, type: 2}
+    - target: {fileID: 9500000, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 100178, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1050296561}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100174, guid: d1a1ae6328466f84a876805226cc4f43,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049082768}
+    - targetCorrespondingSourceObject: {fileID: 100174, guid: d1a1ae6328466f84a876805226cc4f43,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049082769}
+    - targetCorrespondingSourceObject: {fileID: 100176, guid: d1a1ae6328466f84a876805226cc4f43,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1018785069}
+  m_SourcePrefab: {fileID: 100100000, guid: d1a1ae6328466f84a876805226cc4f43, type: 3}
 --- !u!1 &375793755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WordInputManager
   typedWordText: {fileID: 1568696064}
   spawnEnemy: {fileID: 1690389929}
-  playerShooter: {fileID: 929163643}
+  playerShooter: {fileID: 1018785069}
   maxCharacters: 50
 --- !u!4 &552500837
 Transform:
@@ -2107,6 +2209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ProjectileFireRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 449382620596686621, guid: 7473af078daad43439aa29d75d3dc870,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7985086055122009120, guid: 7473af078daad43439aa29d75d3dc870,
         type: 3}
@@ -2912,27 +3019,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873375068}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &929163640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7039490835659988904, guid: 838e3b1ccba74024688b3e3f7c49decd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1534964509}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &929163643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929163640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4581bcbb598c5452f9df8abc02dedfbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooter
-  projectilePrefab: {fileID: 449382620596686621, guid: 7473af078daad43439aa29d75d3dc870,
-    type: 3}
-  firePoint: {fileID: 1050296561}
 --- !u!1 &955113899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,6 +3256,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1447950398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1018785066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100176, guid: d1a1ae6328466f84a876805226cc4f43,
+    type: 3}
+  m_PrefabInstance: {fileID: 355208136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1018785069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018785066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4581bcbb598c5452f9df8abc02dedfbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooter
+  projectilePrefab: {fileID: 449382620596686621, guid: 7473af078daad43439aa29d75d3dc870,
+    type: 3}
+  firePoint: {fileID: 1050296561}
+  mageAttackAnimator: {fileID: 1049082768}
+  mageAimController: {fileID: 1049082769}
+  defaultProjectileDelay: 0.35
+--- !u!1 &1049082765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100174, guid: d1a1ae6328466f84a876805226cc4f43,
+    type: 3}
+  m_PrefabInstance: {fileID: 355208136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1049082766 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: d1a1ae6328466f84a876805226cc4f43,
+    type: 3}
+  m_PrefabInstance: {fileID: 355208136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1049082767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400174, guid: d1a1ae6328466f84a876805226cc4f43,
+    type: 3}
+  m_PrefabInstance: {fileID: 355208136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049082768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049082765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5588eb7553c24b3b805bc568d23a7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MageAttackAnimator
+  animator: {fileID: 1049082766}
+  attackAnimations:
+  - stateName: HumanM@MagicAttackDirect1H01_L
+    projectileDelay: 0.4
+  - stateName: HumanM@MagicAttackDirect1H01_R
+    projectileDelay: 0.35
+  - stateName: HumanM@MagicAttackDirect2H01
+    projectileDelay: 0.7
+  transitionDuration: 0.05
+--- !u!114 &1049082769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049082765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be46df2d068047ca987aecbc8900fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MageAimController
+  objectToRotate: {fileID: 1049082767}
+  rotationSpeed: 12
+  yRotationOffset: 0
 --- !u!1 &1050296560
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,12 +3358,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050296560}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.043, y: 1.17, z: 0.93}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.000000024214387, z: -0, w: 1}
+  m_LocalPosition: {x: 0.031, y: 1.02375, z: 1.494}
+  m_LocalScale: {x: 0.87499994, y: 0.875, z: 0.87499994}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1534964510}
+  m_Father: {fileID: 1049082767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102571155
 GameObject:
@@ -4677,7 +4841,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -17.115604, z: 0, w: 0}
+  m_margin: {x: 0, y: -20.253654, z: 0, w: -11.719032}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5034,6 +5198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanM@MagicAttackOmnidirectionals
       objectReference: {fileID: 0}
+    - target: {fileID: 1811758744703339190, guid: 838e3b1ccba74024688b3e3f7c49decd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4940260236575214198, guid: 838e3b1ccba74024688b3e3f7c49decd,
         type: 3}
       propertyPath: m_Controller
@@ -5046,16 +5215,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1328412726773436428, guid: 838e3b1ccba74024688b3e3f7c49decd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1050296561}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7039490835659988904, guid: 838e3b1ccba74024688b3e3f7c49decd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 929163643}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 838e3b1ccba74024688b3e3f7c49decd, type: 3}
 --- !u!4 &1534964510 stripped
 Transform:
@@ -6137,13 +6298,203 @@ MonoBehaviour:
   spawnInterval: 2
   maxEnemiesAlive: 2
   spawnOnStart: 1
-  availableWords:
-  - chat
-  - chien
-  - moto
-  - dragon
-  - pieuvre
-  - soleil
+  availableWordsText: 'chat
+
+    loup
+
+    mage
+
+    feu
+
+    sort
+
+    lame
+
+    rune
+
+    gobelin
+
+    dragon
+
+    cristal
+
+    potion
+
+    ombre
+
+    flamme
+
+    esprit
+
+    marteau
+
+    bouclier
+
+    epee
+
+    arcane
+
+    sorcier
+
+    tempete
+
+    fantome
+
+    monstre
+
+    donjon
+
+    royaume
+
+    chevalier
+
+    poison
+
+    tresor
+
+    lumiere
+
+    orbe
+
+    mana
+
+    totem
+
+    rituel
+
+    malice
+
+    grimoire
+
+    venin
+
+    caverne
+
+    forteresse
+
+    crane
+
+    spectre
+
+    demon
+
+    attaque
+
+    defense
+
+    mirage
+
+    piege
+
+    foudre
+
+    racine
+
+    terre
+
+    rocher
+
+    plante
+
+    foret
+
+    champion
+
+    crypte
+
+    sablier
+
+    portail
+
+    relique
+
+    heros
+
+    brume
+
+    lancier
+
+    colere
+
+    puissance
+
+    rage
+
+    chance
+
+    secret
+
+    vision
+
+    fleche
+
+    armure
+
+    sombre
+
+    magie
+
+    etoile
+
+    energie
+
+    chaos
+
+    volcan
+
+    glace
+
+    neige
+
+    eclair
+
+    golem
+
+    oracle
+
+    chasseur
+
+    amulette
+
+    emeraude
+
+    rubis
+
+    saphir
+
+    couronne
+
+    invoc
+
+    charge
+
+    barriere
+
+    impact
+
+    furie
+
+    bourrasque
+
+    cendre
+
+    lueur
+
+    maudit
+
+    ancien
+
+    arbre
+
+    temple
+
+    horde
+
+    rapide
+
+    vengeur
+
+    gardien'
 --- !u!4 &1690389930
 Transform:
   m_ObjectHideFlags: 0
@@ -6414,7 +6765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1785619464
 Transform:
   m_ObjectHideFlags: 0
@@ -7331,3 +7682,4 @@ SceneRoots:
   - {fileID: 1428210941}
   - {fileID: 1785619464}
   - {fileID: 629405150}
+  - {fileID: 355208136}
